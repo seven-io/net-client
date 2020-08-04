@@ -1,5 +1,5 @@
 namespace Sms77Api {
-    enum ResponseFormat {
+    public enum ResponseFormat {
         Csv,
         Json,
     }

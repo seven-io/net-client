@@ -17,14 +17,14 @@ namespace Sms77Api {
             SentWith = sentWith;
         }
 
-        public async Task<dynamic> Get(string endpoint, IDictionary<string, string> parameters = null) {
+        public async Task<dynamic> Get(string endpoint, IDictionary<string, dynamic> parameters = null) {
             var builder = new UriBuilder(BaseUrl + "/" + endpoint);
             builder.Port = -1;
 
             var query = HttpUtility.ParseQueryString(builder.Query);
             if (null != parameters) {
                 foreach (var (key, value) in parameters) {
-                    query[key] = value;
+                    query[key] = value is string ? value : value.ToString();
                 }
             }
 

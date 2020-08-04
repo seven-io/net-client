@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace Sms77Api {
     class Client : BaseClient {
@@ -19,8 +18,21 @@ namespace Sms77Api {
             return Convert.ToDouble(response);
         }
 
+        public async Task<dynamic> Status(long msgId) {
+            var response = await Get("status", new Dictionary<string, dynamic> {
+                {"msg_id", msgId},
+            });
+
+            string[] lines = response.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+
+            return new Status {
+                Code = lines[0],
+                Timestamp = lines[1],
+            };
+        }
+
         public async Task<dynamic> Pricing(ResponseFormat format = ResponseFormat.Csv, string country = null) {
-            Dictionary<string, string> parameters = new Dictionary<string, string> {
+            Dictionary<string, dynamic> parameters = new Dictionary<string, dynamic> {
                 {"country", country},
                 {"format", Enum.GetName(typeof(ResponseFormat), format)!.ToLower()},
             };
