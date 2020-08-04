@@ -20,6 +20,7 @@ namespace Sms77Api {
         public async Task<dynamic> Get(string endpoint, IDictionary<string, string> parameters = null) {
             var builder = new UriBuilder(BaseUrl + "/" + endpoint);
             builder.Port = -1;
+
             var query = HttpUtility.ParseQueryString(builder.Query);
             if (null != parameters) {
                 foreach (var (key, value) in parameters) {
@@ -29,12 +30,10 @@ namespace Sms77Api {
 
             query["p"] = ApiKey;
             query["sentWith"] = SentWith;
-            builder.Query = query.ToString();
-            string url = builder.ToString();
 
-            var response = await client.GetStringAsync(url);
-            Console.WriteLine(response);
-            return response;
+            builder.Query = query.ToString();
+
+            return await client.GetStringAsync(builder.ToString());
         }
     }
 }
