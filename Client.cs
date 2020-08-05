@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -24,9 +23,7 @@ namespace Sms77Api {
         }
 
         public async Task<dynamic> Status(StatusParams @params) {
-            var obj = JsonConvert.SerializeObject(@params);
-            var paras = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(obj);
-            var response = await Get("status", paras);
+            var response = await Get("status", @params);
             string[] lines = response.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
 
             return new Status {
@@ -36,14 +33,17 @@ namespace Sms77Api {
         }
 
         public async Task<dynamic> Pricing(PricingParams @params = null) {
-            var obj = JsonConvert.SerializeObject(@params);
-            var paras = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(obj);
+            var pricing = await Get("pricing", @params);
 
-            var pricing = await Get("pricing", paras);
-
-            return "csv" == @params.Format
+            return null == @params || "csv" == @params.Format
                 ? pricing
                 : JsonSerializer.Deserialize<Pricing>(pricing);
+        }
+
+        public async Task<dynamic> ValidateForVoice(ValidateForVoiceParams @params) {
+            var validation = await Post("validate_for_voice", @params);
+            
+            return JsonSerializer.Deserialize<ValidateForVoice>(validation);
         }
     }
 }
