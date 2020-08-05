@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Sms77Api {
     class Client : BaseClient {
         public Client(string apiKey, string sentWith = "CSharp") : base(apiKey, sentWith) {
+        }
+
+        public async Task<Analytics[]> Analytics(AnalyticsParams @params = null) {
+            return JsonConvert.DeserializeObject<Analytics[]>(await Get("analytics", @params));
         }
 
         public async Task<double> Balance() {
@@ -18,11 +23,10 @@ namespace Sms77Api {
             return Convert.ToDouble(response);
         }
 
-        public async Task<dynamic> Status(long msgId) {
-            var response = await Get("status", new Dictionary<string, dynamic> {
-                {"msg_id", msgId},
-            });
-
+        public async Task<dynamic> Status(StatusParams @params) {
+            var obj = JsonConvert.SerializeObject(@params);
+            var paras = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(obj);
+            var response = await Get("status", paras);
             string[] lines = response.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
 
             return new Status {
@@ -31,20 +35,15 @@ namespace Sms77Api {
             };
         }
 
-        public async Task<dynamic> Pricing(ResponseFormat format = ResponseFormat.Csv, string country = null) {
-            Dictionary<string, dynamic> parameters = new Dictionary<string, dynamic> {
-                {"country", country},
-                {"format", Enum.GetName(typeof(ResponseFormat), format)!.ToLower()},
-            };
+        public async Task<dynamic> Pricing(PricingParams @params = null) {
+            var obj = JsonConvert.SerializeObject(@params);
+            var paras = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(obj);
 
+            var pricing = await Get("pricing", paras);
 
-            var pricing = await Get("pricing", parameters);
-
-            if (ResponseFormat.Csv == format) {
-                return pricing;
-            }
-
-            return JsonSerializer.Deserialize<Pricing>(pricing);
+            return "csv" == @params.Format
+                ? pricing
+                : JsonSerializer.Deserialize<Pricing>(pricing);
         }
     }
 }

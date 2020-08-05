@@ -7,15 +7,7 @@ namespace Sms77Api {
         [JsonPropertyName("timestamp")] public string Timestamp { get; set; }
     }
 
-    public enum StatusCode {
-        Delivered,
-        NotDelivered,
-        Buffered,
-        Transmitted,
-        Accepted,
-        Expired,
-        Rejected,
-        Failed,
-        Unknown,
+    public class StatusParams {
+        [JsonPropertyName("msg_id")] public long MsgId { get; set; }
     }
 }

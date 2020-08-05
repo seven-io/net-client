@@ -8,15 +8,15 @@ namespace Sms77Api.Examples {
         }
 
         static async Task RetrieveCountryGermanyAsCsv() {
-            Console.WriteLine(await Client.Pricing(ResponseFormat.Csv, "de"));
+            Console.WriteLine(await Client.Pricing(new PricingParams {Country = "de"}));
         }
 
         static async Task RetrieveAllAsJson() {
-            Console.WriteLine(await Client.Pricing(ResponseFormat.Json));
+            Console.WriteLine(await Client.Pricing(new PricingParams {Format = "json"}));
         }
 
         static async Task RetrieveCountryGermanyAsJson() {
-            Console.WriteLine(await Client.Pricing(ResponseFormat.Json, "de"));
+            Console.WriteLine(await Client.Pricing(new PricingParams {Format = "json", Country = "de"}));
         }
     }
 }

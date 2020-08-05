@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Sms77Api {
     class BaseClient {
@@ -17,19 +19,24 @@ namespace Sms77Api {
             SentWith = sentWith;
         }
 
-        public async Task<dynamic> Get(string endpoint, IDictionary<string, dynamic> parameters = null) {
+        public async Task<dynamic> Get(string endpoint, object @params = null) {
             var builder = new UriBuilder(BaseUrl + "/" + endpoint);
             builder.Port = -1;
 
             var query = HttpUtility.ParseQueryString(builder.Query);
-            if (null != parameters) {
-                foreach (var (key, value) in parameters) {
-                    query[key] = value is string ? value : value.ToString();
+            if (null != @params) {
+                var json = JsonSerializer.Serialize(@params);
+                var paras = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(json);
+
+                foreach (var (key, value) in paras) {
+                    if (null != value) {
+                        query.Add(key, value is string ? value : value.ToString());
+                    }
                 }
             }
 
-            query["p"] = ApiKey;
-            query["sentWith"] = SentWith;
+            query.Add("p", ApiKey);
+            query.Add("sentWith", SentWith);
 
             builder.Query = query.ToString();
 

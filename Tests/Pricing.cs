@@ -13,7 +13,7 @@ namespace Sms77Api.Tests {
 
         [Test]
         public async Task TestPricingGlobalJson() {
-            Sms77Api.Pricing pricing = await BaseTest.Client.Pricing(ResponseFormat.Json);
+            Sms77Api.Pricing pricing = await BaseTest.Client.Pricing(new PricingParams {Format = "json"});
 
             Assert.That(pricing, Is.InstanceOf(typeof(Sms77Api.Pricing)));
             Assert.That(pricing.CountCountries, Is.Positive);
@@ -21,14 +21,15 @@ namespace Sms77Api.Tests {
 
         [Test]
         public async Task TestPricingGermanyCsv() {
-            string pricing = await BaseTest.Client.Pricing(ResponseFormat.Csv, "de");
+            string pricing = await BaseTest.Client.Pricing(new PricingParams {Country = "de"});
 
             Assert.That(pricing, Is.Not.Empty);
         }
 
         [Test]
         public async Task TestPricingGermanyJson() {
-            Sms77Api.Pricing pricing = await BaseTest.Client.Pricing(ResponseFormat.Json, "de");
+            Sms77Api.Pricing pricing = await BaseTest.Client.Pricing(
+                new PricingParams {Country = "de", Format = "json"});
 
             Assert.That(pricing, Is.InstanceOf(typeof(Sms77Api.Pricing)));
             Assert.That(pricing.CountCountries, Is.EqualTo(1));

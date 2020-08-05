@@ -6,7 +6,7 @@ namespace Sms77Api.Tests {
     public class Status {
         [Test]
         public async Task Retrieve() {
-            Sms77Api.Status status = await BaseTest.Client.Status(TestHelper.MsgId);
+            Sms77Api.Status status = await BaseTest.Client.Status(new StatusParams {MsgId = TestHelper.MsgId});
 
             Assert.That(status, Is.InstanceOf(typeof(Sms77Api.Status)));
             Assert.That(status.Code, Is.Not.Empty);

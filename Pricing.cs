@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -32,5 +33,11 @@ namespace Sms77Api {
         [JsonPropertyName("features")] public List<string> Features { get; set; }
 
         [JsonPropertyName("comment")] public string Comment { get; set; }
+    }
+
+    public class PricingParams {
+        [JsonPropertyName("format")] public string Format { get; set; }
+
+        [JsonPropertyName("country")] public string Country { get; set; }
     }
 }
