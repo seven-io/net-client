@@ -42,8 +42,14 @@ namespace Sms77Api {
 
         public async Task<dynamic> ValidateForVoice(ValidateForVoiceParams @params) {
             var validation = await Post("validate_for_voice", @params);
-            
+
             return JsonSerializer.Deserialize<ValidateForVoice>(validation);
+        }
+
+        public async Task<dynamic> Voice(VoiceParams @params, bool json = false) {
+            var response = await Post("voice", @params);
+
+            return json ? new Voice(response) : response;
         }
     }
 }
