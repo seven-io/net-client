@@ -25,18 +25,9 @@ namespace Sms77Api {
         }
 
         public async Task<dynamic> Contacts(ContactsParams @params) {
-            var dict = (IDictionary<string, object>) new ExpandoObject();
-            var method = ContactsAction.read == @params.Action ? "Get" : "Post";
-
-            foreach (var property in @params.GetType().GetProperties()) {
-                var value = property.GetValue(@params);
-
-                if ("Action" != property.Name && null != value) {
-                    dict.Add(property.Name, value);
-                }
-            }
-
+            var dict = ToDictionary(@params, "Action");
             dict.Add("action", Enum.GetName(typeof(ContactsAction), @params.Action));
+            var method = ContactsAction.read == @params.Action ? "Get" : "Post";
 
             var response = await (Task<dynamic>) GetType().GetMethod(method)
                 .Invoke(this, new[] {
@@ -54,14 +45,43 @@ namespace Sms77Api {
             };
         }
 
-        public async Task<dynamic> Status(StatusParams @params) {
-            var response = await Get("status", @params);
-            string[] lines = Util.SplitByLine(response);
+        private IDictionary<string, object> ToDictionary(object @params, string exclude = null) {
+            var dict = (IDictionary<string, object>) new ExpandoObject();
 
-            return new Status {
-                Code = lines[0],
-                Timestamp = lines[1],
-            };
+            foreach (var property in @params.GetType().GetProperties()) {
+                var value = property.GetValue(@params);
+
+                if (exclude != property.Name && null != value) {
+                    dict.Add(property.Name, value);
+                }
+            }
+
+            return dict;
+        }
+
+        public async Task<dynamic> Lookup(LookupParams @params) {
+            var dict = ToDictionary(@params, "Type");
+            dict.Add("type", Enum.GetName(typeof(LookupType), @params.Type));
+
+            var response = await Get("lookup", dict);
+
+            if (LookupType.format == @params.Type) {
+                return JsonConvert.DeserializeObject<FormatLookup>(response);
+            }
+            
+            if (LookupType.hlr == @params.Type) {
+                return JsonSerializer.Deserialize<HlrLookup>(response);
+            }
+            
+            if (LookupType.cnam == @params.Type) {
+                return JsonSerializer.Deserialize<CnamLookup>(response);
+            }
+
+            if (LookupType.mnp == @params.Type && true == @params.Json) {
+                return JsonConvert.DeserializeObject<MnpLookup>(response);
+            }
+
+            return response;
         }
 
         public async Task<dynamic> Pricing(PricingParams @params = null) {
@@ -70,6 +90,12 @@ namespace Sms77Api {
             return null == @params || "csv" == @params.Format
                 ? pricing
                 : JsonSerializer.Deserialize<Pricing>(pricing);
+        }
+
+        public async Task<dynamic> Status(StatusParams @params, bool json = false) {
+            var response = await Get("status", @params);
+
+            return json ? Sms77Api.Status.FromString(response) : response;
         }
 
         public async Task<dynamic> ValidateForVoice(ValidateForVoiceParams @params) {
