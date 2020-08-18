@@ -5,7 +5,7 @@ namespace Sms77Api {
     public class Voice {
         public Voice(string response = null) {
             if (null != response) {
-                var lines = response.Split(Environment.NewLine);
+                var lines = Util.SplitByLine(response);
 
                 Code = Convert.ToUInt16(lines[0]);
                 Id = Convert.ToUInt32(lines[1]);
