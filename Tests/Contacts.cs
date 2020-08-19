@@ -12,15 +12,15 @@ namespace Sms77Api.Tests {
         private const int SuccessCode = 152;
 
         private void AssertContact(Contact contact) {
-            Assert.That(contact.Number, Is.Not.Empty);
-            Assert.That(contact.Name, Is.Not.Empty);
+            Assert.That(contact.Number, Is.Not.Null);
+            Assert.That(contact.Name, Is.Not.Null);
             Assert.That(contact.Id, Is.Positive);
         }
 
         private void AssertDelContact(DelContact contact) {
             Assert.That(contact.Return, Is.EqualTo(SuccessCode));
         }
-        
+
         private void AssertDelNonExistingContact(DelContact contact) {
             Assert.That(contact.Return, Is.EqualTo(ErrorCode));
         }
@@ -32,8 +32,11 @@ namespace Sms77Api.Tests {
 
         [Test]
         public async Task ReadContactCsv() {
-            AssertContact(Contact.FromCsv(await BaseTest.Client.Contacts(
-                new ContactsParams {Action = ContactsAction.read, Id = WriteEditContactId})));
+            ContactsParams paras = new ContactsParams {Action = ContactsAction.read, Id = WriteEditContactId};
+            string response = await BaseTest.Client.Contacts(paras);
+            Contact contact = Contact.FromCsv(response);
+
+            AssertContact(contact);
         }
 
         [Test]
@@ -124,7 +127,7 @@ namespace Sms77Api.Tests {
                 Json = true
             }));
         }
-        
+
         [Test]
         public async Task DelNonExistingContactCsv() {
             AssertDelNonExistingContact(DelContact.FromCsv(await BaseTest.Client.Contacts(new ContactsParams {
@@ -132,7 +135,7 @@ namespace Sms77Api.Tests {
                 Id = NonExistingContactId,
             })));
         }
-        
+
         [Test]
         public async Task DelNonExistingContactJson() {
             AssertDelNonExistingContact(await BaseTest.Client.Contacts(new ContactsParams {

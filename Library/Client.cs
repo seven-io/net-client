@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Http;
+using System.Reflection;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -23,15 +25,11 @@ namespace Sms77Api {
         }
 
         public async Task<dynamic> Contacts(ContactsParams @params) {
-            var dict = Util.ToDictionary(JsonConvert.SerializeObject(@params), "Action");
-            //var dict = Util.ToDictionary(@params, "Action");TODO?
-            dict.Add("action", Enum.GetName(typeof(ContactsAction), @params.Action));
-            var method = ContactsAction.read == @params.Action ? "Get" : "Post";
-
-            var response = await (Task<dynamic>) GetType().GetMethod(method)
-                .Invoke(this, new[] {
-                    "contacts", "Get" == method ? (object) dict : JsonConvert.SerializeObject(dict)
-                });
+            HttpMethod httpMethod = ContactsAction.read == @params.Action ? HttpMethod.Get : HttpMethod.Post;
+            string method = Util.ToTitleCase(httpMethod.Method);
+            MethodInfo methodInfo = GetType().GetMethod(method, BindingFlags.Instance | BindingFlags.NonPublic);
+            object[] paras = {"contacts", @params};
+            var response = await (Task<dynamic>) methodInfo.Invoke(this, paras);
 
             if (!@params.Json) {
                 return response;

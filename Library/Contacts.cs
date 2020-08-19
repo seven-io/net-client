@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Sms77Api {
     public enum ContactsAction {
@@ -52,7 +53,7 @@ namespace Sms77Api {
     }
 
     public class ContactsParams {
-        [JsonProperty("action")] public ContactsAction Action { get; set; }
+        [JsonProperty("action"), JsonConverter(typeof(StringEnumConverter))] public ContactsAction Action { get; set; }
         [JsonProperty("email")] public string Email { get; set; }
         [JsonProperty("empfaenger")] public string Empfaenger { get; set; }
         [JsonProperty("id")] public ulong? Id { get; set; }

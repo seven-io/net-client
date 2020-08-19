@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Globalization;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace Sms77Api {
@@ -43,6 +44,17 @@ namespace Sms77Api {
                 CultureInfo.InvariantCulture,
                 DateTimeStyles.None,
                 out _);
+        }
+
+        public static string ToTitleCase(string str) {
+            return str.Substring(0, 1) + str.Substring(1).ToLower();
+        }
+
+        public static JObject ToJObject(object paras) {
+            var json = JsonConvert.SerializeObject(paras, Formatting.None,
+                new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
+            
+            return JsonConvert.DeserializeObject<JObject>(json);
         }
     }
 }
