@@ -17,8 +17,6 @@ namespace Sms77Api {
                 Console.WriteLine(await request.Content.ReadAsStringAsync());
             }
 
-            Console.WriteLine();
-
             HttpResponseMessage response = await base.SendAsync(request, cancellationToken);
 
             Console.WriteLine("Response: " + response);

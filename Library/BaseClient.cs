@@ -13,13 +13,15 @@ namespace Sms77Api {
         protected readonly Uri BaseUri = new Uri("https://gateway.sms77.io/api");
         protected readonly HttpClient Client;
         protected readonly string SentWith;
+        protected readonly bool Debug;
         protected readonly Dictionary<string, string> CommonPayload;
 
-        public BaseClient(string apiKey, string sentWith = "CSharp") {
+        public BaseClient(string apiKey, string sentWith = "CSharp", bool debug = false) {
             ApiKey = apiKey;
             SentWith = sentWith;
+            Debug = debug;
 
-            Client = new HttpClient(new LoggingHandler(new HttpClientHandler()));
+            Client = Debug ? new HttpClient(new LoggingHandler(new HttpClientHandler())) : new HttpClient();
 
             CommonPayload = new Dictionary<string, string> {
                 {"p", ApiKey},

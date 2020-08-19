@@ -12,7 +12,7 @@ namespace Sms77Api.Tests {
                 throw new ArgumentNullException("Please set environment variable 'SMS77_DUMMY_API_KEY'!");
             }
 
-            Client = new Client(TestHelper.ApiKey);
+            Client = new Client(TestHelper.ApiKey, "CSharp", true);
         }
     }
 }

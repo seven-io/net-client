@@ -7,7 +7,7 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Sms77Api {
     class Client : BaseClient {
-        public Client(string apiKey, string sentWith = "CSharp") : base(apiKey, sentWith) {
+        public Client(string apiKey, string sentWith = "CSharp", bool debug = false) : base(apiKey, sentWith, debug) {
         }
 
         public async Task<Analytics[]> Analytics(AnalyticsParams @params = null) {
