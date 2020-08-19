@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Sms77Api.Tests {
     [TestFixture]
     public class Analytics {
-        private void assertFirstListItem(Sms77Api.Analytics[] analytics) {
+        private static void AssertFirstListItem(Sms77Api.Analytics[] analytics) {
             if (0 == analytics.Length) {
                 Assert.That(analytics.Length, Is.Zero);
             }
@@ -26,40 +26,40 @@ namespace Sms77Api.Tests {
 
         [Test]
         public async Task RetrieveAll() {
-            assertFirstListItem(await BaseTest.Client.Analytics());
+            AssertFirstListItem(await BaseTest.Client.Analytics());
         }
 
         [Test]
         public async Task RetrieveByNonExistingLabel() {
-            // TODO: fix API as it returns all msgs if label was not found!
+            // API eturns all msgs if label was not found
 
-            /*var analytics = await BaseTest.Client.Analytics(
+            var analytics = await BaseTest.Client.Analytics(
                 new AnalyticsParams {Label = "TestLabel"});
 
-            Assert.That(analytics.Count, Is.Zero); */
+            AssertFirstListItem(analytics);
         }
 
         [Test]
         public async Task RetrieveByAllSubaccounts() {
-            assertFirstListItem(await BaseTest.Client.Analytics(
+            AssertFirstListItem(await BaseTest.Client.Analytics(
                 new AnalyticsParams {Subaccounts = "all"}));
         }
 
         [Test]
         public async Task RetrieveGroupedBy() {
-            assertFirstListItem(await BaseTest.Client.Analytics(
+            AssertFirstListItem(await BaseTest.Client.Analytics(
                 new AnalyticsParams {GroupBy = "label"}));
 
-            assertFirstListItem(await BaseTest.Client.Analytics(
+            AssertFirstListItem(await BaseTest.Client.Analytics(
                 new AnalyticsParams {GroupBy = "subaccount"}));
 
-            assertFirstListItem(await BaseTest.Client.Analytics(
+            AssertFirstListItem(await BaseTest.Client.Analytics(
                 new AnalyticsParams {GroupBy = "country"}));
         }
 
         [Test]
         public async Task RetrieveByTimeFrame() {
-            assertFirstListItem(await BaseTest.Client.Analytics(
+            AssertFirstListItem(await BaseTest.Client.Analytics(
                 new AnalyticsParams {Start = "label", End = "label"}));
         }
     }
