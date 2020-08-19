@@ -17,6 +17,6 @@ namespace Sms77Api {
     }
 
     public class StatusParams {
-        [JsonPropertyName("msg_id")] public long MsgId { get; set; }
+        [JsonPropertyName("msg_id")] public ulong MsgId { get; set; }
     }
 }

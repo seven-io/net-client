@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Sms77Api {
@@ -33,7 +34,7 @@ namespace Sms77Api {
             return new UriBuilder(BaseUri + "/" + endpoint) {Port = -1};
         }
 
-        public async Task<dynamic> Get(string endpoint, object @params = null) {
+        protected async Task<dynamic> Get(string endpoint, object @params = null) {
             var builder = InitUriBuilder(endpoint);
             var query = HttpUtility.ParseQueryString(builder.Query);
 
@@ -55,7 +56,7 @@ namespace Sms77Api {
             return await Client.GetStringAsync(builder.ToString());
         }
 
-        public async Task<dynamic> Post(string endpoint, object @params = null) {
+        protected async Task<dynamic> Post(string endpoint, object @params = null) {
             var builder = InitUriBuilder(endpoint);
             var body = new List<KeyValuePair<string, string>>();
 
@@ -64,19 +65,29 @@ namespace Sms77Api {
             }
 
             if (null != @params) {
-                if (@params is string) {
-                    @params = JsonConvert.DeserializeObject<ContactsParams>((string) @params);
+                string json = JsonConvert.SerializeObject(@params, Formatting.None,
+                    new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
+                JObject obj = JsonConvert.DeserializeObject<JObject>(json);
+
+                foreach (var item in obj) {
+                    if (null != item.Value) {
+                        body.Add(new KeyValuePair<string, string>(item.Key, Util.ToString(item.Value)));
+                    }
                 }
+
+                // if (@params is string) { TODO?
+                // @params = JsonConvert.DeserializeObject<ContactsParams>((string) @params);
+                // }
 
                 var props = @params.GetType().GetProperties();
 
-                foreach (var prop in props) {
-                    var value = prop.GetValue(@params);
-
-                    if (null != value) {
-                        body.Add(new KeyValuePair<string, string>(Util.LcFirst(prop.Name), Util.ToString(value)));
-                    }
-                }
+                // foreach (var prop in props) {
+                //     var value = prop.GetValue(@params);
+                //
+                //     if (null != value) {
+                //         body.Add(new KeyValuePair<string, string>(Util.LcFirst(prop.Name), Util.ToString(value)));
+                //     }
+                // }
             }
 
             var response = await Client.SendAsync(new HttpRequestMessage {

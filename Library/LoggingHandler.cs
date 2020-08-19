@@ -11,15 +11,11 @@ namespace Sms77Api {
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
             CancellationToken cancellationToken) {
-            Console.WriteLine("Request: " + request);
-
             if (null != request.Content) {
                 Console.WriteLine(await request.Content.ReadAsStringAsync());
             }
 
             HttpResponseMessage response = await base.SendAsync(request, cancellationToken);
-
-            Console.WriteLine("Response: " + response);
 
             if (null != response.Content) {
                 Console.WriteLine(await response.Content.ReadAsStringAsync());

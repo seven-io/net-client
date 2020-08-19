@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -25,7 +23,8 @@ namespace Sms77Api {
         }
 
         public async Task<dynamic> Contacts(ContactsParams @params) {
-            var dict = ToDictionary(@params, "Action");
+            var dict = Util.ToDictionary(JsonConvert.SerializeObject(@params), "Action");
+            //var dict = Util.ToDictionary(@params, "Action");TODO?
             dict.Add("action", Enum.GetName(typeof(ContactsAction), @params.Action));
             var method = ContactsAction.read == @params.Action ? "Get" : "Post";
 
@@ -45,22 +44,8 @@ namespace Sms77Api {
             };
         }
 
-        private IDictionary<string, object> ToDictionary(object @params, string exclude = null) {
-            var dict = (IDictionary<string, object>) new ExpandoObject();
-
-            foreach (var property in @params.GetType().GetProperties()) {
-                var value = property.GetValue(@params);
-
-                if (exclude != property.Name && null != value) {
-                    dict.Add(property.Name, value);
-                }
-            }
-
-            return dict;
-        }
-
         public async Task<dynamic> Lookup(LookupParams @params) {
-            var dict = ToDictionary(@params, "Type");
+            var dict = Util.ToDictionary(@params, "Type");
             dict.Add("type", Enum.GetName(typeof(LookupType), @params.Type));
 
             var response = await Get("lookup", dict);
@@ -68,11 +53,11 @@ namespace Sms77Api {
             if (LookupType.format == @params.Type) {
                 return JsonConvert.DeserializeObject<FormatLookup>(response);
             }
-            
+
             if (LookupType.hlr == @params.Type) {
                 return JsonSerializer.Deserialize<HlrLookup>(response);
             }
-            
+
             if (LookupType.cnam == @params.Type) {
                 return JsonSerializer.Deserialize<CnamLookup>(response);
             }
@@ -90,6 +75,14 @@ namespace Sms77Api {
             return null == @params || "csv" == @params.Format
                 ? pricing
                 : JsonSerializer.Deserialize<Pricing>(pricing);
+        }
+
+        public async Task<dynamic> Sms(SmsParams @params) {
+            var response = await Post("sms", @params);
+
+            return true == @params.Json
+                ? JsonConvert.DeserializeObject<Sms>(response) // JsonSerializer.Deserialize<Sms>(response)
+                : response;
         }
 
         public async Task<dynamic> Status(StatusParams @params, bool json = false) {

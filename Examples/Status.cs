@@ -1,11 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using Sms77Api.Tests;
 
 namespace Sms77Api.Examples {
     class Status : Base {
-        static async Task Retrieve() {
-            var paras = new StatusParams {MsgId = TestHelper.MsgId};
+        static async Task Retrieve(ulong msgId) {
+            var paras = new StatusParams {MsgId = msgId};
 
             Console.WriteLine(await Client.Status(paras));
         }
