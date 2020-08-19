@@ -81,7 +81,7 @@ namespace Sms77Api {
             var response = await Post("sms", @params);
 
             return true == @params.Json
-                ? JsonConvert.DeserializeObject<Sms>(response) // JsonSerializer.Deserialize<Sms>(response)
+                ? JsonConvert.DeserializeObject<Sms>(response)
                 : response;
         }
 

@@ -1,5 +1,5 @@
 using System;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Sms77Api {
     public class Voice {
@@ -13,20 +13,15 @@ namespace Sms77Api {
             }
         }
 
-        [JsonPropertyName("code")] public ushort Code { get; set; }
-
-        [JsonPropertyName("id")] public uint Id { get; set; }
-
-        [JsonPropertyName("cost")] public double Cost { get; set; }
+        [JsonProperty("code")] public ushort Code { get; set; }
+        [JsonProperty("id")] public uint Id { get; set; }
+        [JsonProperty("cost")] public double Cost { get; set; }
     }
 
     public class VoiceParams {
-        [JsonPropertyName("text")] public string Text { get; set; }
-
-        [JsonPropertyName("to")] public string To { get; set; }
-
-        [JsonPropertyName("xml")] public bool Xml { get; set; }
-
-        [JsonPropertyName("from")] public string From { get; set; }
+        [JsonProperty("text")] public string Text { get; set; }
+        [JsonProperty("to")] public string To { get; set; }
+        [JsonProperty("xml")] public bool Xml { get; set; }
+        [JsonProperty("from")] public string From { get; set; }
     }
 }

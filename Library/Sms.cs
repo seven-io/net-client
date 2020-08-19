@@ -39,9 +39,7 @@ namespace Sms77Api {
         [JsonProperty("return_msg_id")] public bool? ReturnMsgId { get; set; }
         [JsonProperty("label")] public string Label { get; set; }
         [JsonProperty("json")] public bool? Json { get; set; }
-
         [JsonProperty("performance_tracking")] public bool? PerformanceTracking { get; set; }
-
         [JsonProperty("foreign_id")] public string ForeignId { get; set; }
     }
 }

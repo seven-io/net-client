@@ -1,43 +1,31 @@
-using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Sms77Api {
     public class Country {
-        [JsonPropertyName("countryCode")] public string CountryCode { get; set; }
-
-        [JsonPropertyName("countryName")] public string CountryName { get; set; }
-
-        [JsonPropertyName("countryPrefix")] public string CountryPrefix { get; set; }
-
-        [JsonPropertyName("networks")] public List<Network> Networks { get; set; }
+        [JsonProperty("countryCode")] public string CountryCode { get; set; }
+        [JsonProperty("countryName")] public string CountryName { get; set; }
+        [JsonProperty("countryPrefix")] public string CountryPrefix { get; set; }
+        [JsonProperty("networks")] public List<Network> Networks { get; set; }
     }
 
     public class Pricing {
-        [JsonPropertyName("countCountries")] public int CountCountries { get; set; }
-
-        [JsonPropertyName("countNetworks")] public int CountNetworks { get; set; }
-
-        [JsonPropertyName("countries")] public List<Country> Countries { get; set; }
+        [JsonProperty("countCountries")] public int CountCountries { get; set; }
+        [JsonProperty("countNetworks")] public int CountNetworks { get; set; }
+        [JsonProperty("countries")] public List<Country> Countries { get; set; }
     }
 
     public class Network {
-        [JsonPropertyName("mcc")] public string Mcc { get; set; }
-
-        [JsonPropertyName("mncs")] public List<string> Mncs { get; set; }
-
-        [JsonPropertyName("networkName")] public string NetworkName { get; set; }
-
-        [JsonPropertyName("price")] public double Price { get; set; }
-
-        [JsonPropertyName("features")] public List<string> Features { get; set; }
-
-        [JsonPropertyName("comment")] public string Comment { get; set; }
+        [JsonProperty("mcc")] public string Mcc { get; set; }
+        [JsonProperty("mncs")] public List<string> Mncs { get; set; }
+        [JsonProperty("networkName")] public string NetworkName { get; set; }
+        [JsonProperty("price")] public double Price { get; set; }
+        [JsonProperty("features")] public List<string> Features { get; set; }
+        [JsonProperty("comment")] public string Comment { get; set; }
     }
 
     public class PricingParams {
-        [JsonPropertyName("format")] public string Format { get; set; }
-
-        [JsonPropertyName("country")] public string Country { get; set; }
+        [JsonProperty("format")] public string Format { get; set; }
+        [JsonProperty("country")] public string Country { get; set; }
     }
 }

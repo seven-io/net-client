@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Sms77Api {
     public enum StatusCode {
@@ -23,11 +23,11 @@ namespace Sms77Api {
             };
         }
         
-        [JsonPropertyName("code")] public string Code { get; set; }
-        [JsonPropertyName("timestamp")] public string Timestamp { get; set; }
+        [JsonProperty("code")] public string Code { get; set; }
+        [JsonProperty("timestamp")] public string Timestamp { get; set; }
     }
 
     public class StatusParams {
-        [JsonPropertyName("msg_id")] public ulong MsgId { get; set; }
+        [JsonProperty("msg_id")] public ulong MsgId { get; set; }
     }
 }

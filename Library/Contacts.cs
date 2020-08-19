@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Sms77Api {
     public enum ContactsAction {
@@ -27,11 +27,9 @@ namespace Sms77Api {
             return new Contact {Id = Convert.ToUInt64(values[0]), Name = values[1], Number = values[2]};
         }
 
-        [JsonPropertyName("ID")] public ulong Id { get; set; }
-
-        [JsonPropertyName("Name")] public string Name { get; set; }
-
-        [JsonPropertyName("Number")] public string Number { get; set; }
+        [JsonProperty("ID")] public ulong Id { get; set; }
+        [JsonProperty("Name")] public string Name { get; set; }
+        [JsonProperty("Number")] public string Number { get; set; }
     }
 
     public class DelContact {
@@ -39,7 +37,7 @@ namespace Sms77Api {
             return new DelContact {Return = Convert.ToUInt16(csv.Trim())};
         }
 
-        [JsonPropertyName("return")] public uint Return { get; set; }
+        [JsonProperty("return")] public uint Return { get; set; }
     }
 
     public class WriteContact {
@@ -49,23 +47,16 @@ namespace Sms77Api {
             return new WriteContact {Id = Convert.ToUInt64(lines[1]), Return = Convert.ToUInt16(lines[0])};
         }
 
-        [JsonPropertyName("id")] public ulong Id { get; set; }
-
-        [JsonPropertyName("return")] public uint Return { get; set; }
+        [JsonProperty("id")] public ulong Id { get; set; }
+        [JsonProperty("return")] public uint Return { get; set; }
     }
 
     public class ContactsParams {
-        [JsonPropertyName("action")] public ContactsAction Action { get; set; }
-
-        [JsonPropertyName("email")] public string Email { get; set; }
-
-        [JsonPropertyName("empfaenger")] public string Empfaenger { get; set; }
-
-        [JsonPropertyName("id")] public ulong? Id { get; set; }
-
-        [JsonPropertyName("json")] public bool Json { get; set; }
-
-
-        [JsonPropertyName("nick")] public string Nick { get; set; }
+        [JsonProperty("action")] public ContactsAction Action { get; set; }
+        [JsonProperty("email")] public string Email { get; set; }
+        [JsonProperty("empfaenger")] public string Empfaenger { get; set; }
+        [JsonProperty("id")] public ulong? Id { get; set; }
+        [JsonProperty("json")] public bool Json { get; set; }
+        [JsonProperty("nick")] public string Nick { get; set; }
     }
 }

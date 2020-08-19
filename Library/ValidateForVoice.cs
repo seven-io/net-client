@@ -1,25 +1,18 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Sms77Api {
     public class ValidateForVoice {
-        [JsonPropertyName("code")] public string Code { get; set; }
-
-        [JsonPropertyName("error")] public string Error { get; set; }
-
-        [JsonPropertyName("formatted_output")] public string FormattedOutput { get; set; }
-
-        [JsonPropertyName("id")] public long? Id { get; set; }
-
-        [JsonPropertyName("sender")] public string Sender { get; set; }
-
-        [JsonPropertyName("success")] public bool Success { get; set; }
-
-        [JsonPropertyName("voice")] public bool Voice { get; set; }
+        [JsonProperty("code")] public string Code { get; set; }
+        [JsonProperty("error")] public string Error { get; set; }
+        [JsonProperty("formatted_output")] public string FormattedOutput { get; set; }
+        [JsonProperty("id")] public long? Id { get; set; }
+        [JsonProperty("sender")] public string Sender { get; set; }
+        [JsonProperty("success")] public bool Success { get; set; }
+        [JsonProperty("voice")] public bool Voice { get; set; }
     }
 
     public class ValidateForVoiceParams {
-        [JsonPropertyName("callback")] public string Callback { get; set; }
-
-        [JsonPropertyName("number")] public string Number { get; set; }
+        [JsonProperty("callback")] public string Callback { get; set; }
+        [JsonProperty("number")] public string Number { get; set; }
     }
 }
