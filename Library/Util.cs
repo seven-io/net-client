@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Globalization;
 using Newtonsoft.Json.Linq;
 
 namespace Sms77Api {
@@ -33,6 +34,15 @@ namespace Sms77Api {
             }
 
             return dict;
+        }
+
+        public static bool IsValidDate(string date, string format) {
+            return DateTime.TryParseExact(
+                date,
+                format,
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.None,
+                out _);
         }
     }
 }

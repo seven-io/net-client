@@ -1,6 +1,18 @@
 using System.Text.Json.Serialization;
 
 namespace Sms77Api {
+    public enum StatusCode {
+        DELIVERED,
+        NOTDELIVERED,
+        BUFFERED,
+        TRANSMITTED,
+        ACCEPTED,
+        EXPIRED,
+        REJECTED,
+        FAILED,
+        UNKNOWN
+    }
+    
     public class Status {
         public static Status FromString(string response) {
             string[] lines = Util.SplitByLine(response);
@@ -12,7 +24,6 @@ namespace Sms77Api {
         }
         
         [JsonPropertyName("code")] public string Code { get; set; }
-
         [JsonPropertyName("timestamp")] public string Timestamp { get; set; }
     }
 
