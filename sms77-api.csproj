@@ -11,12 +11,16 @@
         <PackageProjectUrl>https://github.com/sms77io/csharp-client</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/sms77io/csharp-client/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/sms77io/csharp-client</RepositoryUrl>
+        <IsPackable>true</IsPackable>
+        <Title>Sms77.io API Client</Title>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>1.0.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.0-preview-20200519-01" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.0" />
         <PackageReference Include="NUnit" Version="3.12.0" />
-        <PackageReference Include="NUnit3TestAdapter" Version="4.0.0-alpha.1" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
         <PackageReference Include="System.Text.Json" Version="4.7.2" />
     </ItemGroup>
 
