@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -28,9 +29,8 @@ namespace Sms77.Api {
         public async Task<dynamic> Contacts(ContactsParams @params) {
             HttpMethod httpMethod = ContactsAction.read == @params.Action ? HttpMethod.Get : HttpMethod.Post;
             string method = Util.ToTitleCase(httpMethod.Method);
-            MethodInfo methodInfo = GetType().GetMethod(method, BindingFlags.Instance | BindingFlags.NonPublic);
             object[] paras = {"contacts", @params};
-            var response = await (Task<dynamic>) methodInfo.Invoke(this, paras);
+            var response = await CallDynamicMethod(method, paras);
 
             if (!@params.Json) {
                 return response;
@@ -40,6 +40,21 @@ namespace Sms77.Api {
                 ContactsAction.write => WriteContact.FromCsv(response),
                 ContactsAction.del => DelContact.FromCsv(response),
                 _ => JsonConvert.DeserializeObject<Contact[]>(response)
+            };
+        }
+
+        public async Task<dynamic> Hooks(Library.Hooks.Params @params) {
+            var httpMethod = Library.Hooks.Action.read == @params.Action ? HttpMethod.Get : HttpMethod.Post;
+            var method = Util.ToTitleCase(httpMethod.Method);
+            object[] paras = {"hooks", @params};
+            var response = await CallDynamicMethod(method, paras);
+            
+            return @params.Action switch {
+                Library.Hooks.Action.subscribe 
+                    => JsonConvert.DeserializeObject<Library.Hooks.Subscription>(response),
+                Library.Hooks.Action.unsubscribe 
+                    => JsonConvert.DeserializeObject<Library.Hooks.Unsubscription>(response),
+                _ => JsonConvert.DeserializeObject<Library.Hooks.Read>(response)
             };
         }
 
@@ -100,6 +115,11 @@ namespace Sms77.Api {
             var response = await Post("voice", @params);
 
             return json ? new Voice(response) : response;
+        }
+
+        private async Task<dynamic> CallDynamicMethod(string name, object?[] paras) {
+            var methodInfo = GetType().GetMethod(name, BindingFlags.Instance | BindingFlags.NonPublic);
+            return  await (Task<dynamic>) methodInfo.Invoke(this, paras);
         }
     }
 }

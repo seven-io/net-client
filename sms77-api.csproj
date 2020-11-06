@@ -4,9 +4,9 @@
         <OutputType>Library</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <RootNamespace>Sms77</RootNamespace>
-        <Company>sms77</Company>
+        <Company>sms77 e.K.</Company>
         <Authors>sms77 e.K.</Authors>
-        <Description>API wrapper for the Sms77.io gateway</Description>
+        <Description>API client for the Sms77.io SMS gateway.</Description>
         <Copyright>sms77 e.K.</Copyright>
         <PackageProjectUrl>https://github.com/sms77io/csharp-client</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/sms77io/csharp-client/blob/master/LICENSE</PackageLicenseUrl>
@@ -14,7 +14,11 @@
         <IsPackable>true</IsPackable>
         <Title>Sms77.io API Client</Title>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.1.0</PackageVersion>
+        <PackageIconUrl>https://i.ibb.co/b7vLnq0/Logo-Icon-128x128.png</PackageIconUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>sms text2speech mnp hlr cnam</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>

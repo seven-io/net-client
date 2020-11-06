@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Globalization;
+using System.Linq;
+using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -55,6 +57,10 @@ namespace Sms77.Api.Library {
                 new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
             
             return JsonConvert.DeserializeObject<JObject>(json);
+        }
+        
+        public static IEnumerable<T> GetEnumValues<T>() {
+            return Enum.GetValues(typeof(T)).Cast<T>();
         }
     }
 }
