@@ -3,8 +3,32 @@
 # Official C# API Client for the Sms77.io SMS Gateway
 
 ## Installation
-Open up a terminal and run the following command:
-`dotnet add package sms77-api`
+
+**.NET CLI**
+```shell
+dotnet add package sms77-api
+```
+
+**Package Manager**
+```shell
+Install-Package sms77-api
+```
+
+**Package Reference**
+```xml
+<PackageReference Include="sms77-api" />
+```
+
+**Paket**
+```shell
+paket add sms77-api
+```
+
+**F# Interactive**
+```shell
+#r "nuget: sms77-api, 1.2.0"
+```
+
 
 ### Example
 
