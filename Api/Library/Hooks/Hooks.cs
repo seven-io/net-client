@@ -10,6 +10,7 @@ namespace Sms77.Api.Library.Hooks {
     }
     
     public enum EventType {
+        all,
         sms_mo,
         dlr,
         voice_status
@@ -17,6 +18,7 @@ namespace Sms77.Api.Library.Hooks {
     
     public enum RequestMethod {
         GET,
+        JSON,
         POST
     }
     

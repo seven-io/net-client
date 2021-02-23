@@ -7,5 +7,9 @@ namespace Sms77.Api.Tests {
         internal static readonly string ApiKey = DummyApiKey;
         internal static readonly string PhoneNumber = "+491771783130";
         internal static readonly string MyPhoneNumber = Environment.GetEnvironmentVariable("SMS77_TO");
+
+        internal static string CreateRandomUrl() {
+            return $"http://my.tld/{Guid.NewGuid()}";
+        }
     }
 }

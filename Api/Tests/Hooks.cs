@@ -1,5 +1,4 @@
 #nullable enable
-using System;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Sms77.Api.Library;
@@ -64,7 +63,7 @@ namespace Sms77.Api.Tests {
                 Action = Action.subscribe,
                 EventType = eventType,
                 RequestMethod = requestMethod,
-                TargetUrl = targetUrl ?? $"http://my.tld/{Guid.NewGuid()}"
+                TargetUrl = targetUrl ?? TestHelper.CreateRandomUrl()
             });
 
             return subscribed;

@@ -1,12 +1,10 @@
 ![Sms77.io Logo](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77")
 
-# C# API Client for the Sms77.io SMS Gateway
+# Official C# API Client for the Sms77.io SMS Gateway
 
 ## Installation
-
-```
-dotnet add package sms77-api
-```
+Open up a terminal and run the following command:
+`dotnet add package sms77-api`
 
 ### Example
 
@@ -28,3 +26,11 @@ class Program
 ```
 
 For further examples have a look at the [examples](./Api/Examples).
+
+
+#### Support
+Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact/).
+
+
+##### License
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](./LICENSE)
