@@ -1,4 +1,3 @@
-#nullable enable
 using System;
 using System.Threading.Tasks;
 using Sms77.Api.Library.Hooks;
