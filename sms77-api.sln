@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sms77-api", "sms77-api.csproj", "{ACC3F283-CC22-4B6A-98FA-DF552BCE96CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sms77-library", "sms77-library\sms77-library.csproj", "{1F650655-30DF-4EB3-946F-2D06389FE5BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACC3F283-CC22-4B6A-98FA-DF552BCE96CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC3F283-CC22-4B6A-98FA-DF552BCE96CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC3F283-CC22-4B6A-98FA-DF552BCE96CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC3F283-CC22-4B6A-98FA-DF552BCE96CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F650655-30DF-4EB3-946F-2D06389FE5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F650655-30DF-4EB3-946F-2D06389FE5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F650655-30DF-4EB3-946F-2D06389FE5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F650655-30DF-4EB3-946F-2D06389FE5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A58830F5-DA01-4099-BE9B-531BEDE7932A}
+	EndGlobalSection
+EndGlobal
