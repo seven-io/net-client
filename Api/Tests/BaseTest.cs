@@ -1,6 +1,6 @@
 using System;
 using NUnit.Framework;
-using Sms77.Api.Library;
+using sms77_library.Api;
 
 namespace Sms77.Api.Tests {
     [SetUpFixture]

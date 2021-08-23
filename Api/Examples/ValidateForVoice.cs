@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using Sms77.Api.Library;
 using Sms77.Api.Tests;
+using sms77_library.Api.Library;
 
 namespace Sms77.Api.Examples {
     class ValidateForVoice : BaseExample {

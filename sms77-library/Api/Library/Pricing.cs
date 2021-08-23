@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     public class Country {
         [JsonProperty("countryCode")] public string CountryCode { get; set; }
         [JsonProperty("countryName")] public string CountryName { get; set; }

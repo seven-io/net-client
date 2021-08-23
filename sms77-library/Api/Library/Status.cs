@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     public enum StatusCode {
         DELIVERED,
         NOTDELIVERED,

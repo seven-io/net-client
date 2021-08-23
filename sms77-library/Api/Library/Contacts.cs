@@ -3,7 +3,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Sms77.Api.Library
+namespace sms77_library.Api.Library
 {
     public enum ContactsAction
     {

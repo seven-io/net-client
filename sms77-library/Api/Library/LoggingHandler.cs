@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     class LoggingHandler : DelegatingHandler {
         public LoggingHandler(HttpMessageHandler innerHandler)
             : base(innerHandler) {

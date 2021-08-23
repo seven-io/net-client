@@ -1,6 +1,6 @@
 using System;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     [Serializable()]
     public class ApiException : Exception {
         public ApiException() {

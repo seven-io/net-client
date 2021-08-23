@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     public class ValidateForVoice {
         [JsonProperty("code")] public string Code { get; set; }
         [JsonProperty("error")] public string Error { get; set; }

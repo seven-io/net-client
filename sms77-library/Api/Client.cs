@@ -4,9 +4,9 @@ using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Sms77.Api.Library;
+using sms77_library.Api.Library;
 
-namespace Sms77.Api
+namespace sms77_library.Api
 {
     public class Client : BaseClient
     {

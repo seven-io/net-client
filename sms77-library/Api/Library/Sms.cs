@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     public class Message {
         [JsonProperty("id")] public ulong? Id { get; set; }
         [JsonProperty("sender")] public string Sender { get; set; }

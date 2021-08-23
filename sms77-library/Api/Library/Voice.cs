@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Sms77.Api.Library {
+namespace sms77_library.Api.Library {
     public class Voice {
         public Voice(string response = null) {
             if (null != response) {

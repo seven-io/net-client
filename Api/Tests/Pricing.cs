@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Sms77.Api.Library;
+using sms77_library.Api.Library;
 
 namespace Sms77.Api.Tests {
     [TestFixture]
@@ -14,9 +14,9 @@ namespace Sms77.Api.Tests {
 
         [Test]
         public async Task TestPricingGlobalJson() {
-            Library.Pricing pricing = await BaseTest.Client.Pricing(new PricingParams {Format = "json"});
+            sms77_library.Api.Library.Pricing pricing = await BaseTest.Client.Pricing(new PricingParams {Format = "json"});
 
-            Assert.That(pricing, Is.InstanceOf(typeof(Library.Pricing)));
+            Assert.That(pricing, Is.InstanceOf(typeof(sms77_library.Api.Library.Pricing)));
             Assert.That(pricing.CountCountries, Is.Positive);
         }
 
@@ -29,10 +29,10 @@ namespace Sms77.Api.Tests {
 
         [Test]
         public async Task TestPricingGermanyJson() {
-            Library.Pricing pricing = await BaseTest.Client.Pricing(
+            sms77_library.Api.Library.Pricing pricing = await BaseTest.Client.Pricing(
                 new PricingParams {Country = "de", Format = "json"});
 
-            Assert.That(pricing, Is.InstanceOf(typeof(Library.Pricing)));
+            Assert.That(pricing, Is.InstanceOf(typeof(sms77_library.Api.Library.Pricing)));
             Assert.That(pricing.CountCountries, Is.EqualTo(1));
         }
     }

@@ -1,9 +1,9 @@
 #nullable enable
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Sms77.Api.Library;
-using Sms77.Api.Library.Hooks;
-using Action = Sms77.Api.Library.Hooks.Action;
+using sms77_library.Api.Library;
+using sms77_library.Api.Library.Hooks;
+using Action = sms77_library.Api.Library.Hooks.Action;
 
 namespace Sms77.Api.Tests {
     [TestFixture]

@@ -6,7 +6,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Sms77.Api.Library
+namespace sms77_library.Api.Library
 {
     public class Util
     {

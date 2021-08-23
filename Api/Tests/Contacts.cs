@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Sms77.Api.Library;
+using sms77_library.Api.Library;
 
 namespace Sms77.Api.Tests {
     [TestFixture]

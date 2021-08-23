@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Sms77.Api.Library.Hooks {
+namespace sms77_library.Api.Library.Hooks {
     public enum Action {
         read,
         subscribe,
