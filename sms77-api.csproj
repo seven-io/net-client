@@ -23,8 +23,11 @@
 
     <ItemGroup>
       <Compile Remove="sms77-library\**" />
+      <Compile Remove="_ReSharper.Caches\**" />
       <EmbeddedResource Remove="sms77-library\**" />
+      <EmbeddedResource Remove="_ReSharper.Caches\**" />
       <None Remove="sms77-library\**" />
+      <None Remove="_ReSharper.Caches\**" />
     </ItemGroup>
 
     <ItemGroup>
