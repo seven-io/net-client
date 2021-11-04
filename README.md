@@ -49,12 +49,10 @@ class Program
 }
 ```
 
-For further examples have a look at the [examples](./Api/Examples).
-
 
 #### Support
 Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact/).
 
 
 ##### License
-[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](./LICENSE)
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
