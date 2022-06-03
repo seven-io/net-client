@@ -1,5 +1,6 @@
 ﻿#nullable enable
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -68,6 +69,20 @@ namespace sms77_library.Api
             };
         }
 
+        public async Task<dynamic> Journal(JournalParams @params)
+        {
+            var dict = Util.ToDictionary(@params, "Type");
+            dict.Add("type", Enum.GetName(typeof(JournalType), @params.Type));
+
+            var response = await Get("journal", dict);
+
+            return @params.Type switch {
+                JournalType.outbound => JsonConvert.DeserializeObject<List<JournalOutbound>>(response),
+                JournalType.voice => JsonConvert.DeserializeObject<List<JournalVoice>>(response),
+                _ => JsonConvert.DeserializeObject<List<Journal>>(response)
+            };
+        }
+        
         public async Task<dynamic> Lookup(LookupParams @params)
         {
             var dict = Library.Util.ToDictionary(@params, "Type");

@@ -49,7 +49,7 @@ class Program
 }
 ```
 
-For further examples have a look at the [examples](./Api/Examples).
+For further examples have a look at the [examples](https://github.com/sms77io/net-client/tree/master/sms77-api/Api/Examples).
 
 
 #### Support

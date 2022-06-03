@@ -1,6 +1,6 @@
-![Sms77.io Logo](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77")
+![](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77 Logo")
 
-# Official C# API Client for the Sms77.io SMS Gateway
+# Official .NET API Client for the [sms77 SMS Gateway](https://www.sms77.io)
 
 ## Installation
 
