@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Globalization;
 using System.Linq;
+using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -36,9 +37,13 @@ namespace sms77_library.Api.Library
 
             foreach (var property in @params.GetType().GetProperties())
             {
+                if (exclude == property.Name) {
+                    continue;
+                }
+                
                 var value = property.GetValue(@params);
 
-                if (exclude != property.Name && null != value)
+                if (null != value)
                 {
                     dict.Add(property.Name, value);
                 }
@@ -67,7 +72,10 @@ namespace sms77_library.Api.Library
             var json = JsonConvert.SerializeObject(
                 paras,
                 Formatting.None,
-                new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
+                new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore}
+            );
+            
+            Console.WriteLine(json);
 
             return JsonConvert.DeserializeObject<JObject>(json);
         }

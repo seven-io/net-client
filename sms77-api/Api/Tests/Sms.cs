@@ -13,7 +13,7 @@ namespace Sms77.Api.Tests {
         public async Task Single() {
             Assert.That(await BaseTest.Client.Sms(new SmsParams {
                     Text = "HI2U!",
-                    To = TestHelper.MyPhoneNumber,
+                    To = TestHelper.PhoneNumber,
                     Flash = true,
                     From = TestHelper.PhoneNumber,
                     Delay = $"{DateTimeOffset.UtcNow.ToUnixTimeSeconds() + 60}",

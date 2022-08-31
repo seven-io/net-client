@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Web;
 using Newtonsoft.Json;
 using sms77_library.Api.Library;
+using sms77_library.Api.Library.Hooks;
 
 namespace sms77_library.Api
 {
@@ -83,12 +85,13 @@ namespace sms77_library.Api
             };
         }
         
-        public async Task<dynamic> Lookup(LookupParams @params)
-        {
-            var dict = Library.Util.ToDictionary(@params, "Type");
-            dict.Add("type", Enum.GetName(typeof(LookupType), @params.Type));
+        public async Task<dynamic> Lookup(LookupParams @params) {
+           var query = HttpUtility.ParseQueryString("");
+           query.Add("json", @params.Json.ToString());
+           query.Add("number", @params.Number);
+           query.Add("type", Enum.GetName(typeof(LookupType), @params.Type));
 
-            var response = await Get("lookup", dict);
+            var response = await Get($"lookup", null, query);
 
             if (LookupType.format == @params.Type)
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
@@ -27,9 +28,10 @@ namespace sms77_library.Api.Library
             _commonPayload.Add("sentWith", SentWith);
         }
 
-        protected async Task<dynamic> Get(string endpoint, object @params = null)
+        protected async Task<dynamic> Get(string endpoint, object @params = null, NameValueCollection qs = null)
         {
             var query = HttpUtility.ParseQueryString("");
+            var requestUri = endpoint;
 
             if (null != @params)
             {
@@ -44,7 +46,13 @@ namespace sms77_library.Api.Library
                 query.Add(item.Key, item.Value);
             }
 
-            return await Client.GetStringAsync($"{endpoint}?{query}");
+            requestUri = $"{endpoint}?{query}";
+
+            if (qs != null) {
+                requestUri += $"&{qs}";
+            }
+                
+            return await Client.GetStringAsync(requestUri);
         }
 
         protected async Task<dynamic> Post(string endpoint, object @params = null)
