@@ -6,4 +6,4 @@ RLS=$(find . -wholename "./bin/Debug/*.nupkg" -print0 | xargs -r -0 ls -1 -t | h
 
 echo "$RLS"
 
-dotnet nuget push "$RLS" --api-key="$SMS77IO_NUGET_API_KEY"
+dotnet nuget push "$RLS" --source "https://api.nuget.org/v3/index.json" --api-key="$SEVEN_NUGET_API_KEY"
