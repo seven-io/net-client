@@ -13,7 +13,9 @@ namespace Sms77.Api.Tests {
                 throw new MissingEnvironmentVariableException("Please set environment variable SMS77_DUMMY_API_KEY");
             }
 
-            Client = new Client(TestHelper.ApiKey, "CSharp", true);
+            var signingSecret = Environment.GetEnvironmentVariable("SEVEN_SIGNING_KEY");
+
+            Client = new Client(TestHelper.ApiKey, "CSharp", true, signingSecret);
         }
     }
 }

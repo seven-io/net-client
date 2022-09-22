@@ -49,7 +49,12 @@ class Program
 }
 ```
 
-For further examples have a look at the [examples](https://github.com/sms77io/net-client/tree/master/sms77-api/Api/Examples).
+For [request signing](https://www.sms77.io/en/docs/gateway/http-api/signing-of-requests/) set the fourth `Client` parameter to your signing secret which you can find in your [developer dashboard](https://app.sms77.io/developer).
+```csharp
+new Client(TestHelper.ApiKey, "CSharp", true, Environment.GetEnvironmentVariable("SMS77_SIGNING_KEY"));
+```
+
+For further examples have a look at the [examples](https://github.com/seven-io/net-client/tree/master/sms77-api/Api/Examples).
 
 
 #### Support
@@ -57,4 +62,4 @@ Need help? Feel free to [contact us](https://www.sms77.io/en/company/contact/).
 
 
 ##### License
-[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](./LICENSE)
+[![MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)

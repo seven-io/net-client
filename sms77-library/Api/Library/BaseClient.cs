@@ -14,14 +14,28 @@ namespace sms77_library.Api.Library
         protected readonly HttpClient Client;
         protected readonly bool Debug;
         protected readonly string SentWith;
-
-        public BaseClient(string apiKey, string sentWith = "CSharp", bool debug = false)
+        
+        public BaseClient(
+            string apiKey, 
+            string sentWith = "CSharp",
+            bool debug = false,
+            string? signingSecret = null
+            )
         {
             ApiKey = apiKey;
             SentWith = sentWith;
             Debug = debug;
 
-            Client = Debug ? new HttpClient(new LoggingHandler(new HttpClientHandler())) : new HttpClient();
+            var httpMessageHandler = new HttpClientHandler();
+            var clientOptions = new ClientOptions(apiKey) {
+                Debug = debug,
+                SentWith = sentWith,
+                SigningSecret = signingSecret
+            };
+
+            Client = Debug 
+                ? new HttpClient(new CustomHttpHandler(new LoggingHandler(httpMessageHandler), clientOptions))
+                : new HttpClient(new CustomHttpHandler(httpMessageHandler, clientOptions));
             Client.BaseAddress = new Uri("https://gateway.sms77.io/api/");
 
             _commonPayload.Add("p", ApiKey);

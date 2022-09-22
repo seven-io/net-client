@@ -13,7 +13,12 @@ namespace sms77_library.Api
 {
     public class Client : BaseClient
     {
-        public Client(string apiKey, string sentWith = "CSharp", bool debug = false) : base(apiKey, sentWith, debug)
+        public Client(
+            string apiKey, 
+            string sentWith = "CSharp",
+            bool debug = false,
+            string? signingSecret = null
+        ) : base(apiKey, sentWith, debug, signingSecret)
         {
         }
 
@@ -124,7 +129,7 @@ namespace sms77_library.Api
                 ? pricing
                 : JsonConvert.DeserializeObject<Pricing>(pricing);
         }
-
+        
         public async Task<dynamic> Sms(SmsParams @params)
         {
             var response = await Post("sms", @params);
