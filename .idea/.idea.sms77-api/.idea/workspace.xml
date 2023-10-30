@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="467ffe37-ca66-4e21-9e73-b014b09fb866" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api.sln" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Analytics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Balance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Balance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/BaseExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/BaseExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Contacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Contacts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Hooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Hooks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Journal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Journal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Lookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Lookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Pricing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Pricing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Sms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Sms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Status.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/ValidateForVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/ValidateForVoice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Voice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Voice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Analytics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Balance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Balance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/BaseTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Contacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Contacts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Hooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Hooks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Journal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Journal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Lookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Lookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/MissingEnvironmentVariableException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/MissingEnvironmentVariableException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Pricing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Pricing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/RequestSigning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/RequestSigning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Sms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Sms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Status.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/TestHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/TestHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/ValidateForVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/ValidateForVoice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Voice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Voice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-api/sms77-api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/seven-api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/ClientOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/ClientOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/CustomHttpHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/CustomHttpHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Analytics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/ApiException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/ApiException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/BaseClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/BaseClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Contacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Contacts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Hooks/Hooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Hooks/Hooks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Journal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Journal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/LoggingHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/LoggingHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Lookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Lookup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Pricing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Pricing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Sms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Sms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Status.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Util.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/ValidateForVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/ValidateForVoice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Voice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Voice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/publish_and_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/publish_and_push.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/sms77-library.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/seven-library.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms77-library/sms77-library.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/seven-library.csproj.DotSettings" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dadd22e019742ce80aaefef99855be0142288/87/b10b649a/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/213f6a1bb9759e1a6ca3554b8b562bc415754c41aec253a9a7dd18028b04f/RNGCryptoServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2440828bb66863f432e1215c44548462ce68d886c998aceef3be68461ee298/HMACSHA256.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2525672ab3c6c89062c4d1a513fe4f2949a163247174833edf4062cafd5e291/JObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3b2d18fdf68a41e41384bbfc0d5304bc8edda1ec416479076fefd68cbe9477/Environment.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/57f696374f7e99aa2810a2dc23df6eb38f42d4b895ad206221318584fdc22/Byte.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6ae3dfaf99c957c4e5186641a13baea9778168e8f4be05d465e71c9468e67/Formatting.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6b9a5fdaa1870bb1bc2102822241b59af239aa9bd597f525eb17af3f478/HttpRequestMessage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/78deee757ee8ebd8ede67a0141d9f1345184878fadfe07044dde222eb652719/StringContent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7b5a1af99f5ea07164de5aa95892ff79955c0ccf3bcc4bc1973b4c06d3e766/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7ed6f5e3b5f78ae215ce2f37f9ca779fea6e31feb6dfdf8b5683b9b27ba54/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7fbc77ff231bbe341f14aaeb31da51a1441ab8856fc695f9dafc83b78f2e2ec4/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8c23a459e485959868433c5863e87471da378a87ceeaff1f14cb5aeb7e979f/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8fdbfd65913b40ab9444adcb5fc1c7a091e590/_415c7/IFormatProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df8be1d38f7bb64affa8974ceb6dd98c9cfc29a03e0ce18e988e3b376a729b7/HttpMethod.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f78b8cd14795bd85c5348196a692fc2a8cec4d1696227bf55f63be5cb7211b4b/DelegatingHandler.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2E6zlTkNYPtrADmQNBfgvgwdEnY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\aim\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\aim\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\aim\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="467ffe37-ca66-4e21-9e73-b014b09fb866" name="Changes" comment="" />
+      <created>1661930972889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661930972889</updated>
+      <workItem from="1661930976622" duration="4871000" />
+      <workItem from="1663822642645" duration="1464000" />
+      <workItem from="1663826012066" duration="3443000" />
+      <workItem from="1663829524865" duration="10464000" />
+      <workItem from="1683800083845" duration="42000" />
+      <workItem from="1698663729381" duration="1056000" />
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
