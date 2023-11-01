@@ -4,66 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="467ffe37-ca66-4e21-9e73-b014b09fb866" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sms77-api/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api.sln" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Analytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Balance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Balance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/BaseExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/BaseExample.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Contacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Contacts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Hooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Hooks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Journal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Journal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Lookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Lookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Pricing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Pricing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Sms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Sms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/ValidateForVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/ValidateForVoice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Examples/Voice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Examples/Voice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Analytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Balance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Balance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/BaseTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/BaseTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Contacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Contacts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Hooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Hooks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Journal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Journal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Lookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Lookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/MissingEnvironmentVariableException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/MissingEnvironmentVariableException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Pricing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Pricing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/RequestSigning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/RequestSigning.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Sms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Sms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/TestHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/TestHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/ValidateForVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/ValidateForVoice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/Api/Tests/Voice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/Api/Tests/Voice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-api/sms77-api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/seven-api/seven-api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/ClientOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/ClientOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/CustomHttpHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/CustomHttpHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Analytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/ApiException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/ApiException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/BaseClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/BaseClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Contacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Contacts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Hooks/Hooks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Hooks/Hooks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Journal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Journal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/LoggingHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/LoggingHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Lookup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Lookup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Pricing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Pricing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Sms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Sms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Status.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Status.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/ValidateForVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/ValidateForVoice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/Api/Library/Voice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/Api/Library/Voice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/publish_and_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/publish_and_push.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/sms77-library.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/seven-library.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms77-library/sms77-library.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/seven-library/seven-library.csproj.DotSettings" afterDir="false" />
-    </list>
+    <list default="true" id="467ffe37-ca66-4e21-9e73-b014b09fb866" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +72,7 @@
       <workItem from="1663826012066" duration="3443000" />
       <workItem from="1663829524865" duration="10464000" />
       <workItem from="1683800083845" duration="42000" />
-      <workItem from="1698663729381" duration="1056000" />
+      <workItem from="1698663729381" duration="1423000" />
     </task>
     <servers />
   </component>
