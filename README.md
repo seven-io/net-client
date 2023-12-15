@@ -1,6 +1,7 @@
-![](https://www.sms77.io/wp-content/uploads/2019/07/sms77-Logo-400x79.png "sms77 Logo")
+<img src="https://www.seven.io/wp-content/uploads/Logo.svg" width="250" />
 
-# Official .NET API Client for the [sms77 SMS Gateway](https://www.sms77.io)
+
+# Official .NET API Client for the [seven SMS Gateway](https://www.seven.io)
 
 ## Installation
 
