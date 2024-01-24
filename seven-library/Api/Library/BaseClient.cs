@@ -42,7 +42,7 @@ namespace seven_library.Api.Library
             _commonPayload.Add("sentWith", SentWith);
         }
 
-        protected async Task<dynamic> Get(string endpoint, object @params = null, NameValueCollection qs = null)
+        public async Task<dynamic> Get(string endpoint, object @params = null, NameValueCollection qs = null)
         {
             var query = HttpUtility.ParseQueryString("");
             var requestUri = endpoint;
@@ -69,7 +69,7 @@ namespace seven_library.Api.Library
             return await Client.GetStringAsync(requestUri);
         }
 
-        protected async Task<dynamic> Post(string endpoint, object @params = null)
+        public async Task<dynamic> Post(string endpoint, object @params = null)
         {
             var body = new List<KeyValuePair<string, string>>();
 

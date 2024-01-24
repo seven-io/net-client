@@ -14,7 +14,7 @@
         <IsPackable>true</IsPackable>
         <Title>seven.io API Client</Title>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>2.0.0</PackageVersion>
+        <PackageVersion>2.1.0</PackageVersion>
         <RepositoryType>git</RepositoryType>
         <PackageTags>sms text2speech mnp hlr cnam tts</PackageTags>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

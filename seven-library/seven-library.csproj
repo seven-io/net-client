@@ -4,7 +4,7 @@
     <RootNamespace>seven_library</RootNamespace>
     <Nullable>enable</Nullable>
     <LangVersion>8.0</LangVersion>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>2.1.0</PackageVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>seven communications GmbH &amp; Co. KG</Authors>
     <Copyright>seven communications GmbH &amp; Co. KG</Copyright>

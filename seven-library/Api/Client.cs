@@ -7,18 +7,21 @@ using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
 using seven_library.Api.Library;
+using seven_library.Api.Library.Subaccounts;
+using Contact = seven_library.Api.Library.Contact;
 
 namespace seven_library.Api
 {
     public class Client : BaseClient
     {
+        public Subaccounts Subaccounts;
         public Client(
             string apiKey, 
             string sentWith = "CSharp",
             bool debug = false,
             string? signingSecret = null
-        ) : base(apiKey, sentWith, debug, signingSecret)
-        {
+        ) : base(apiKey, sentWith, debug, signingSecret) {
+            Subaccounts = new Subaccounts(this);
         }
 
         public async Task<Analytics[]> Analytics(AnalyticsParams @params = null)
