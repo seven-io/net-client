@@ -27,7 +27,6 @@ namespace seven_library.Api.Library {
         [JsonProperty("to")] public string To { get; set; }
         [JsonProperty("text")] public string Text { get; set; }
         [JsonProperty("from")] public string From { get; set; }
-        [JsonProperty("debug")] public bool? Debug { get; set; }
         [JsonProperty("delay")] public string Delay { get; set; }
         [JsonProperty("no_reload")] public bool? NoReload { get; set; }
         [JsonProperty("unicode")] public bool? Unicode { get; set; }
