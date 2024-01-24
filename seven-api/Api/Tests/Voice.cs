@@ -6,7 +6,6 @@ namespace Seven.Api.Tests {
     [TestFixture]
     public class Voice {
         public static readonly VoiceParams TextParams = new VoiceParams {
-            Debug = false,
             From = TestHelper.PhoneNumber,
             Text = "HI2U",
             To = TestHelper.PhoneNumber,

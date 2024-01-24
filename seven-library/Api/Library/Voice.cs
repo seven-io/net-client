@@ -19,7 +19,6 @@ namespace seven_library.Api.Library {
     }
 
     public class VoiceParams {
-        [JsonProperty("debug")] public bool Debug { get; set; }
         [JsonProperty("text")] public string Text { get; set; }
         [JsonProperty("to")] public string To { get; set; }
         [JsonProperty("xml")] public bool Xml { get; set; }
