@@ -9,8 +9,8 @@ namespace Seven.Api.Tests {
 
         [OneTimeSetUp]
         public void Setup() {
-            if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("SEVEN_API_KEY_SANDBOX"))) {
-                throw new MissingEnvironmentVariableException("Please set environment variable SEVEN_API_KEY_SANDBOX");
+            if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("SEVEN_API_KEY"))) {
+                throw new MissingEnvironmentVariableException("Please set environment variable SEVEN_API_KEY");
             }
 
             var signingSecret = Environment.GetEnvironmentVariable("SEVEN_SIGNING_KEY");

@@ -90,5 +90,33 @@ namespace seven_library.Api.Library
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
+        
+        public async Task<dynamic> Delete(string endpoint, object @params = null, NameValueCollection qs = null)
+        {
+            var query = HttpUtility.ParseQueryString("");
+
+            if (null != @params)
+            {
+                foreach (var item in Util.ToJObject(@params))
+                {
+                    query.Add(item.Key, Util.ToString(item.Value));
+                }
+            }
+
+            foreach (var item in _commonPayload)
+            {
+                query.Add(item.Key, item.Value);
+            }
+
+            var requestUri = $"{endpoint}?{query}";
+
+            if (qs != null) {
+                requestUri += $"&{qs}";
+            }
+                
+            var task = await Client.DeleteAsync(requestUri);
+
+            return await task.Content.ReadAsStringAsync();
+        }
     }
 }

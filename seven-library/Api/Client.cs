@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
 using seven_library.Api.Library;
+using seven_library.Api.Library.Rcs;
 using seven_library.Api.Library.Subaccounts;
 using Contact = seven_library.Api.Library.Contact;
 
@@ -14,7 +15,8 @@ namespace seven_library.Api
 {
     public class Client : BaseClient
     {
-        public Subaccounts Subaccounts;
+        public readonly Subaccounts Subaccounts;
+        public readonly Rcs Rcs;
         public Client(
             string apiKey, 
             string sentWith = "CSharp",
@@ -22,6 +24,7 @@ namespace seven_library.Api
             string? signingSecret = null
         ) : base(apiKey, sentWith, debug, signingSecret) {
             Subaccounts = new Subaccounts(this);
+            Rcs = new Rcs(this);
         }
 
         public async Task<Analytics[]> Analytics(AnalyticsParams @params = null)
