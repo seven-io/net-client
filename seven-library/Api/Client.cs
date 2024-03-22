@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
 using seven_library.Api.Library;
+using seven_library.Api.Library.Groups;
 using seven_library.Api.Library.Rcs;
 using seven_library.Api.Library.Subaccounts;
 using Contact = seven_library.Api.Library.Contact;
@@ -16,13 +17,16 @@ namespace seven_library.Api
     public class Client : BaseClient
     {
         public readonly Subaccounts Subaccounts;
+        public readonly Groups Groups;
         public readonly Rcs Rcs;
         public Client(
             string apiKey, 
             string sentWith = "CSharp",
             bool debug = false,
             string? signingSecret = null
-        ) : base(apiKey, sentWith, debug, signingSecret) {
+        ) : base(apiKey, sentWith, debug, signingSecret)
+        {
+            Groups = new Groups(this);
             Subaccounts = new Subaccounts(this);
             Rcs = new Rcs(this);
         }
