@@ -1,6 +1,7 @@
 ﻿#nullable enable
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -41,7 +42,7 @@ namespace seven_library.Api
                 throw new ApiException("Invalid API-Key or API busy.");
             }
 
-            return Convert.ToDouble(response);
+            return Convert.ToDouble(response, CultureInfo.InvariantCulture);
         }
 
         public async Task<dynamic> Contacts(ContactsParams @params)
