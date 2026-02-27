@@ -11,9 +11,9 @@
         <PackageProjectUrl>https://github.com/seven-io/net-client</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/seven-io/net-client/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/seven-io/net-client</RepositoryUrl>
-        <IsPackable>true</IsPackable>
+        <IsPackable>false</IsPackable>
         <Title>seven.io API Client</Title>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <PackageVersion>2.1.0</PackageVersion>
         <RepositoryType>git</RepositoryType>
         <PackageTags>sms text2speech mnp hlr cnam tts</PackageTags>

@@ -63,7 +63,47 @@ class Program
 }
 ```
 
-## Features
+## Usage Examples
+
+### Send SMS
+
+```csharp
+var response = await client.Sms(new SmsParams
+{
+    To = "+491234567890",
+    Text = "Hello from seven!",
+    From = "MyApp"
+});
+```
+
+### Text-to-Speech Voice Call
+
+```csharp
+var response = await client.Voice(new VoiceParams
+{
+    To = "+491234567890",
+    Text = "Hello, this is a test call from seven."
+});
+```
+
+### Phone Number Lookup
+
+```csharp
+var result = await client.Lookup(new LookupParams
+{
+    Number = "+491234567890",
+    Type = LookupType.mnp,
+    Json = true
+});
+```
+
+### Check Balance
+
+```csharp
+var balance = await client.Balance();
+```
+
+## All Features
 
 | Feature | Description |
 |---------|-------------|
@@ -81,7 +121,15 @@ class Program
 | **ValidateForVoice** | Validate phone numbers for voice calls |
 | **Subaccounts** | Manage subaccounts |
 
-For detailed usage of each feature, see the [examples](seven-api/Api/Examples).
+For more examples, see the [examples directory](seven-api/Api/Examples).
+
+## Request Signing
+
+For [request signing](https://www.seven.io/en/docs/gateway/http-api/signing-of-requests) pass your signing secret (found in your [developer dashboard](https://app.seven.io/developer)) as the fourth parameter:
+
+```csharp
+var client = new Client("YOUR_API_KEY", "CSharp", false, "YOUR_SIGNING_SECRET");
+```
 
 ## Support
 
