@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.nuget.org/packages/sms77-api"><img src="https://img.shields.io/nuget/v/sms77-api?style=flat-square" alt="NuGet Version" /></a>
+  <a href="https://www.nuget.org/packages/seven-library"><img src="https://img.shields.io/nuget/v/seven-library?style=flat-square" alt="NuGet Version" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-teal.svg?style=flat-square" alt="MIT License" /></a>
   <img src="https://img.shields.io/badge/.NET-Standard%202.0-blue?style=flat-square" alt=".NET Standard 2.0" />
 </p>
@@ -25,17 +25,17 @@
 
 **.NET CLI**
 ```shell
-dotnet add package sms77-api
+dotnet add package seven-library
 ```
 
 **Package Manager**
 ```shell
-Install-Package sms77-api
+Install-Package seven-library
 ```
 
 **Package Reference**
 ```xml
-<PackageReference Include="sms77-api" />
+<PackageReference Include="seven-library" />
 ```
 
 ## Quick Start
