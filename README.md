@@ -1,4 +1,4 @@
-![seven logo](https://www.seven.io/wp-content/uploads/Logo.svg)
+<img src="https://www.seven.io/wp-content/uploads/Logo.svg" width="250" alt="seven logo" />
 
 # Official .NET API Client
 
