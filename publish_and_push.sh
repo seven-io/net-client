@@ -1,10 +1,13 @@
 #!/bin/sh
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
+
 [ -f .env ] && . ./.env
 
 dotnet publish
 
-RLS=$(find . -wholename "./bin/Debug/*.nupkg" -print0 | xargs -r -0 ls -1 -t | head -1)
+RLS=$(ls -t bin/Debug/*.nupkg 2>/dev/null | head -1)
 
 echo "$RLS"
 
