@@ -1,18 +1,12 @@
-<p align="center">
-  <img src="https://www.seven.io/wp-content/uploads/Logo.svg" width="250" alt="seven logo" />
-</p>
+![seven logo](https://www.seven.io/wp-content/uploads/Logo.svg)
 
-<h1 align="center">Official .NET API Client</h1>
+# Official .NET API Client
 
-<p align="center">
-  Send SMS, make voice calls, look up phone numbers, and more — via the <a href="https://www.seven.io">seven</a> API.
-</p>
+Send SMS, make voice calls, look up phone numbers, and more — via the [seven](https://www.seven.io) API.
 
-<p align="center">
-  <a href="https://www.nuget.org/packages/seven-library"><img src="https://img.shields.io/nuget/v/seven-library?style=flat-square" alt="NuGet Version" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-teal.svg?style=flat-square" alt="MIT License" /></a>
-  <img src="https://img.shields.io/badge/.NET-Standard%202.0-blue?style=flat-square" alt=".NET Standard 2.0" />
-</p>
+[![NuGet Version](https://img.shields.io/nuget/v/seven-library?style=flat-square)](https://www.nuget.org/packages/seven-library)
+[![MIT License](https://img.shields.io/badge/License-MIT-teal.svg?style=flat-square)](LICENSE)
+![.NET Standard 2.0](https://img.shields.io/badge/.NET-Standard%202.0-blue?style=flat-square)
 
 ---
 
